@@ -60,20 +60,23 @@ body{
 }
 .search-area{
     border: none;
-    position: relative;
     margin: auto;
-    margin-top: 30px;
-    width: 774px;
+    flex-grow: 2;
+    padding: 1px;
+    padding-left: 20px;
     display: flex;
     align-items: center;
     height: 123px;
-    flex-shrink: 0;
-    border-radius: 28px;
+    border-radius: 28px 0px 0px 28px;
     background: #303D5E;
 }
+
+.search-area:focus{
+    outline: none;
+}
+
 .search-button{
     display: flex;
-    position: absolute;
     bottom: 213px;
     right: 571px;
     height: 123px;
@@ -114,4 +117,12 @@ input{
     opacity: 0.9;
     line-height: 167px;
     letter-spacing: 2.88px;
+}
+
+.search-div {
+    display: flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    width: 100%;
+    padding: 0 20%;
 }
