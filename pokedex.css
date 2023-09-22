@@ -196,14 +196,42 @@ input{
     left: 346px;
     width: 50%;
     height: 8px;
-    border-radius: 9px;
+    border-radius: 35px;
     background-color: #E6BC2A;
 }
 .type-box{
+    display: flex;
     position: relative;
-    bottom: 12px;
-    right: 10px;
-    width: 20px;
-    height: 90px;
+    bottom: 1160px;
+    margin-left: 1397px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    width: 348px;
+    height: 329px;
     background-color: #303D5E;
+}
+.type-box p{
+    font-size: 30px;
+    color: #E6BC2A;
+}
+.description{
+    display: flex;
+    position: relative;
+    bottom: 1000px;
+    flex-direction: column;
+    margin-left: 1397px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    width: 348px;
+    height: 420px;
+    background-color: #FFCB04;
+}
+.description h1{
+    font-size: 42px;
+    font-weight: bolder;
+}
+.description p{
+    padding: 40px;
 }

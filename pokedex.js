@@ -15,6 +15,9 @@ theme_button.addEventListener('click',function(){
         document.querySelector('.search-button').style.background = "#0D1D45"
         document.querySelector('#svg').style.fill = "white"
         theme_button.style.transition = '0.5s ease-in-out'
+        document.querySelector('.information-block').style.background = '#0D1D45'
+        document.querySelector('.type-box').style.background = '#0D1D45'
+
     }
     else{
         theme_button.style.left = '82px'
@@ -27,6 +30,8 @@ theme_button.addEventListener('click',function(){
         document.querySelector('.search-button').style.background = "#FFCB04"
         document.querySelector('#svg').style.fill = "black"
         theme_button.style.transition = '0.5s ease-in-out'
+        document.querySelector('.information-block').style.background = '#303D5E'
+        document.querySelector('.type-box').style.background = '#303D5E'
     }
     isDarkTheme = !isDarkTheme
 })
