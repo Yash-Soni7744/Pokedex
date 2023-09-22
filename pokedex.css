@@ -91,6 +91,7 @@ body{
 .search-button svg{
     width: 55px;
     height: 55px;
+    fill: black;
 }
 input::placeholder{
     border: none;
