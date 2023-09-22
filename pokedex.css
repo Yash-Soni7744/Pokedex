@@ -134,12 +134,12 @@ input{
     width: 1135px;
     height: 1216px;
     position: relative;
-    left: 115px;
+    display: flex;
+    flex-direction: column;
+    left: 100px;
     background-color: #303D5E;
     border-radius: 30px;
     bottom: 40px;
-    align-items: center;
-    justify-content: center;
 }
 #pokemon-name{
     position: absolute;
@@ -160,6 +160,50 @@ input{
 .information-block p{
     color: #E6BC2A;
     font-size: 32px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 330px;
+    left: -385px;
     display: flex;
-    margin: 45px 22px;
+    margin: 0px 90px;
+    margin-top: 50px;
+}
+.progress-bar{
+    position: relative;
+    top: 305px;
+    left: 346px;
+    width: 600px;
+    height: 9px;
+    border-radius: 9px;
+    background-color: #4C67AA;
+}
+.progress-bar .blinker{
+    position: relative;
+    width: 22px;
+    float: right;
+    height: 22px;
+    border-radius: 10px;
+    display: flex;
+    margin-top: -12px;
+    left: -292px;
+    top: -5px;
+    background-color: #E6BC2A;
+    filter: blur(14px);
+}
+.progress-bar div{
+    top: 305px;
+    left: 346px;
+    width: 50%;
+    height: 8px;
+    border-radius: 9px;
+    background-color: #E6BC2A;
+}
+.type-box{
+    position: relative;
+    bottom: 12px;
+    right: 10px;
+    width: 20px;
+    height: 90px;
+    background-color: #303D5E;
 }
