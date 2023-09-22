@@ -127,3 +127,39 @@ input{
     width: 100%;
     padding: 0 20%;
 }
+.pokemon-data{
+    margin-top: 470px;
+}
+.information-block{
+    width: 1135px;
+    height: 1216px;
+    position: relative;
+    left: 115px;
+    background-color: #303D5E;
+    border-radius: 30px;
+    bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+#pokemon-name{
+    position: absolute;
+    top: 200px;
+    left: 38%;
+    display: flex;
+    width: 272px;
+    height: 57px;
+    flex-direction: column;
+    justify-content: center;
+    color: #E6BC2A;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 167px; /* 303.636% */
+    letter-spacing: 3.3px;
+}
+.information-block p{
+    color: #E6BC2A;
+    font-size: 32px;
+    display: flex;
+    margin: 45px 22px;
+}

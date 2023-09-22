@@ -31,8 +31,8 @@ theme_button.addEventListener('click',function(){
     isDarkTheme = !isDarkTheme
 })
 
-const id;
-let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${id}`
+const id = NULL;let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${id}`
+
 let response = fetch(url)
 response.then((value)=>{
     return value.json()
@@ -40,6 +40,8 @@ response.then((value)=>{
     console.log(value)
 })
 let ID = document.querySelector('.search').value
+let searchButton = document.querySelector('.search-button')
+
 if (ID == id){
     console.log(value)
 }
