@@ -40,31 +40,41 @@ let searchButton = document.querySelector('.search-button')
 
 // Event listener for the search button click
 function main(){
-    let input = document.querySelector('.search-area').value;
-    let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input}`;
+  let input = document.querySelector('.search-area').value;
+  let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input}`;
+  
+  fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((value) => {
+    let loweredInput = input.toLowerCase()
+    console.log(loweredInput)
     
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((value) => {
-        let loweredInput = input.toLowerCase()
-        console.log(loweredInput)
+    if (input == value.id || loweredInput === value.name) {
+      let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
+      document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
+      document.getElementById('pokemon-image').src = value.image;
+      document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
+      document.querySelector('.description').querySelector('p').innerHTML = value.description;
+      
+    }else {
+      alert('No Pokemon Found');
+    }
+    const height = value.height
+    const weight = value.weight
+    const HP = value.hp
+    const attack = value.attack
+    const sp_attack = value.special_attack
+    const defence = value.defence
+    const sp_defence = value.special_defence
+    const speed = value.speed
 
-        if (input == value.id || loweredInput === value.name.toLowerCase()) {
-          let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
-          document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
-          document.getElementById('pokemon-image').src = value.image;
-          document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
-          document.querySelector('.description').querySelector('p').innerHTML = value.description;
-          
-        }else {
-          alert('No Pokemon Found');
-        }
-    })
+    
+  })
 }
 searchButton.addEventListener('click', function(e) {
     main()

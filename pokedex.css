@@ -186,7 +186,7 @@ input{
     border-radius: 10px;
     display: flex;
     margin-top: -12px;
-    left: -292px;
+    left: -585px;
     top: -5px;
     background-color: #E6BC2A;
     filter: blur(14px);
@@ -194,7 +194,7 @@ input{
 .progress-bar div{
     top: 305px;
     left: 346px;
-    width: 50%;
+    width: 1%;
     height: 8px;
     border-radius: 35px;
     background-color: #E6BC2A;
