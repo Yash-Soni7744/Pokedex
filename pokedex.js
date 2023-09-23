@@ -36,17 +36,44 @@ theme_button.addEventListener('click',function(){
     isDarkTheme = !isDarkTheme
 })
 
-const id = NULL;let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${id}`
-
-let response = fetch(url)
-response.then((value)=>{
-    return value.json()
-}).then((value)=>{
-    console.log(value)
-})
-let ID = document.querySelector('.search').value
 let searchButton = document.querySelector('.search-button')
 
-if (ID == id){
-    console.log(value)
+// Event listener for the search button click
+function main(){
+    let input = document.querySelector('.search-area').value;
+    let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input}`;
+    
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((value) => {
+        let loweredInput = input.toLowerCase()
+        console.log(loweredInput)
+
+        if (input == value.id || loweredInput === value.name.toLowerCase()) {
+          let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
+          document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
+          document.getElementById('pokemon-image').src = value.image;
+          document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
+          document.querySelector('.description').querySelector('p').innerHTML = value.description;
+          
+        }else {
+          alert('No Pokemon Found');
+        }
+    })
 }
+searchButton.addEventListener('click', function(e) {
+    main()
+});
+document.querySelector('.search-area').addEventListener('keyup', function(e) {
+    if (e.keyCode == 13) {
+        main(); // Call the main function when Enter is pressed
+    }
+});
+  
+  // Event listener for the Enter key press
+  
