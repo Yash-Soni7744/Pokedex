@@ -60,11 +60,17 @@ function main(){
       document.getElementById('pokemon-image').src = value.image;
       document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
       document.querySelector('.description').querySelector('p').innerHTML = value.description;
+      const height = 350
+      const maxHeight = 700
+      const heightPercent = (height/maxHeight)*100
+  
+      const heightProgress =  document.getElementById('height')
+      heightProgress.style.width = heightPercent+'%'
       
     }else {
       alert('No Pokemon Found');
     }
-    const height = value.height
+
     const weight = value.weight
     const HP = value.hp
     const attack = value.attack
