@@ -60,26 +60,80 @@ function main(){
       document.getElementById('pokemon-image').src = value.image;
       document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
       document.querySelector('.description').querySelector('p').innerHTML = value.description;
-      const height = 350
-      const maxHeight = 700
+
+      //height calcualtion
+      const height = value.height
+      const maxHeight = 210
       const heightPercent = (height/maxHeight)*100
   
       const heightProgress =  document.getElementById('height')
       heightProgress.style.width = heightPercent+'%'
+
+      //weight calculation
+      const weight = value.weight
+      const maxWeight = 10000
+      const weightPercent = (weight/maxWeight)*100
+  
+      const weightProgress =  document.getElementById('weight')
+      weightProgress.style.width = weightPercent+'%'
       
+      //hp calculation
+      const HP = value.hp
+      const maxHP = 255
+      const HPPercent = (HP/maxHP)*100
+  
+      const HPProgress =  document.getElementById('HP')
+      HPProgress.style.width = HPPercent+'%'
+
+      //attack calculation
+      const attack = value.attack
+      const maxAttack = 190
+      const attackPercent = (attack/maxAttack)*100
+  
+      const attackProgress =  document.getElementById('attack')
+      attackProgress.style.width = attackPercent+'%'
+
+      //sp-attack calculation
+      const sp_Attack = value.special_attack
+      const maxsp_Attack = 195
+      const sp_AttackPercent = (sp_Attack/maxsp_Attack)*100
+  
+      const sp_AttackProgress =  document.getElementById('special-attack')
+      sp_AttackProgress.style.width = sp_AttackPercent+'%'
+
+      //defence calculation
+      const defence = value.defence
+      const maxDefence = 230
+      const defencePercent = (defence/maxDefence)*100
+  
+      const defenceProgress =  document.getElementById('defence')
+      defenceProgress.style.width = defencePercent+'%'
+
+      //sp-defence calculation
+      const sp_defence = value.special_defence
+      const maxsp_Defence = 230
+      const sp_defencePercent = (sp_defence/maxsp_Defence)*100
+  
+      const sp_defenceProgress =  document.getElementById('special-defence')
+      sp_defenceProgress.style.width = sp_defencePercent+'%'
+
+      //speed calculation
+      const speed = value.speed
+      const maxSpeed = 180
+      const speedPercent = (speed/maxSpeed)*100
+  
+      const speedProgress =  document.getElementById('speed')
+
+      speedProgress.style.width = speedPercent+'%'
+      speedProgress.classList.remove('speed-animation')
+      speedProgress.classList.add('speed-animation')
+      speedProgress.style.animation = 'speed 2s linear forwards'
+
+
     }else {
       alert('No Pokemon Found');
     }
 
-    const weight = value.weight
-    const HP = value.hp
-    const attack = value.attack
-    const sp_attack = value.special_attack
-    const defence = value.defence
-    const sp_defence = value.special_defence
-    const speed = value.speed
-
-    
   })
 }
 searchButton.addEventListener('click', function(e) {

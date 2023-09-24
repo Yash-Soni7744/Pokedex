@@ -241,3 +241,70 @@ input{
     top: 123px;
     z-index: 999;
 }
+.speed-animation{
+    animation: speed 2s linear forwards;
+}
+@keyframes height{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes weight{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes HP{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes attack{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes special-attack{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes defence{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes special-defence{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
+@keyframes speed{
+    0%{
+        width: 0%;
+    }
+    100%{
+        
+    }
+}
