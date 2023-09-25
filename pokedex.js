@@ -57,7 +57,7 @@ function main(){
     if (input == value.id || loweredInput === value.name) {
       let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
       document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
-      document.getElementById('pokemon-image').src = value.image;
+      document.querySelector('#pokemon-image').src = value.image;
       document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
       document.querySelector('.description').querySelector('p').innerHTML = value.description;
 
@@ -65,75 +65,78 @@ function main(){
       const height = value.height
       const maxHeight = 210
       const heightPercent = (height/maxHeight)*100
-  
-      const heightProgress =  document.getElementById('height')
-      heightProgress.style.width = heightPercent+'%'
-      heightProgress.style.animation = 'height 1s linear forwards'
 
       //weight calculation
       const weight = value.weight
       const maxWeight = 10000
       const weightPercent = (weight/maxWeight)*100
   
-      const weightProgress =  document.getElementById('weight')
-      weightProgress.style.width = weightPercent+'%'
-      weightProgress.style.animation = 'weight 1s linear forwards'
-
       //hp calculation
       const HP = value.hp
       const maxHP = 255
       const HPPercent = (HP/maxHP)*100
       
-      const HPProgress =  document.getElementById('HP')
-      HPProgress.style.width = HPPercent+'%'
-      HPProgress.style.animation = 'HP 1s linear forwards'
-
       //attack calculation
       const attack = value.attack
       const maxAttack = 190
       const attackPercent = (attack/maxAttack)*100
-  
-      const attackProgress =  document.getElementById('attack')
-      attackProgress.style.width = attackPercent+'%'
-      attackProgress.style.animation = 'attack 1s linear forwards'
       
       //sp-attack calculation
       const sp_Attack = value.special_attack
       const maxsp_Attack = 195
       const sp_AttackPercent = (sp_Attack/maxsp_Attack)*100
       
-      const sp_AttackProgress =  document.getElementById('special-attack')
-      sp_AttackProgress.style.width = sp_AttackPercent+'%'
-      sp_AttackProgress.style.animation = 'special-attack 1s linear forwards'
-      
       //defence calculation
       const defence = value.defence
       const maxDefence = 230
       const defencePercent = (defence/maxDefence)*100
-      
-      const defenceProgress =  document.getElementById('defence')
-      defenceProgress.style.width = defencePercent+'%'
-      defenceProgress.style.animation = 'defence 1s linear forwards'
 
       //sp-defence calculation
       const sp_defence = value.special_defence
       const maxsp_Defence = 230
       const sp_defencePercent = (sp_defence/maxsp_Defence)*100
-  
-      const sp_defenceProgress =  document.getElementById('special-defence')
-      sp_defenceProgress.style.width = sp_defencePercent+'%'
-      sp_defenceProgress.style.animation = 'special-defence 1s linear forwards'
 
       //speed calculation
       const speed = value.speed
       const maxSpeed = 180
       const speedPercent = (speed/maxSpeed)*100
-  
-      const speedProgress =  document.getElementById('speed')
 
-      speedProgress.style.width = speedPercent+'%'
-      speedProgress.style.animation = 'speed 1s linear forwards'
+      //blinker position setting
+      const updateBlinker = (attribute,percent)=>{
 
+        const progressBars = document.getElementById(attribute)
+        progressBars.style.width = percent + "%"
+        progressBars.style.animation = `${attribute} 1s linear forwards`
+        progressBars.style.animationPlayState = 'running'
+      }
+      const progressBlinkers = document.querySelectorAll(".progress-bar div")
+      progressBlinkers.forEach((progressBlinker)=>{
+        const id = progressBlinker.parentElement.id;
+        
+        // Position the blinker at the end of the progress bar
+        const blinker = progressBlinker.parentElement.querySelector(".blinker");
+
+        blinker.style.left = '97%'; // Position at the end
+        
+        setInterval(function(){
+          blinker.style.opacity = 1
+          blinker.style.transition = '0.7s ease-out'
+        },800)
+        setInterval(function(){
+          blinker.style.opacity = 0
+          blinker.style.transition = '0.7s ease-in'
+        },1600)
+        
+      })
+      
+      updateBlinker('height',heightPercent)
+      updateBlinker('weight',weightPercent)
+      updateBlinker('HP',HPPercent)
+      updateBlinker('attack',attackPercent)
+      updateBlinker('special-attack',sp_AttackPercent)
+      updateBlinker('defence',defencePercent)
+      updateBlinker('special-defence',sp_defencePercent)
+      updateBlinker('speed',speedPercent)
 
     }else {
       alert('No Pokemon Found');

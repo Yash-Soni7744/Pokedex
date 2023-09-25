@@ -187,14 +187,14 @@ input{
 }
 .progress-bar .blinker{
     position: absolute;
-    width: 22px;
+    width: 14px;
     float: right;
-    height: 22px;
+    height: 20px;
     border-radius: 10px;
     display: flex;
     margin-top: -12px;
     background-color: #E6BC2A;
-    filter: blur(14px);
+    filter: blur(11px);
 }
 .type-box{
     display: flex;
@@ -241,70 +241,76 @@ input{
     top: 123px;
     z-index: 999;
 }
-.speed-animation{
-    animation: speed 2s linear forwards;
-}
+
 @keyframes height{
-    0%{
-        width: 0%;
+    from{
+        width: 0;
     }
-    100%{
-        
+    to{
+    
     }
 }
 @keyframes weight{
-    0%{
-        width: 0%;
+    from{
+        width: 0;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes HP{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes attack{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes special-attack{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes defence{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes special-defence{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
     }
 }
 @keyframes speed{
-    0%{
+    from{
         width: 0%;
     }
-    100%{
+    to{
         
+    }
+}
+@keyframes blinker{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
     }
 }
