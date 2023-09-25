@@ -41,7 +41,7 @@ let searchButton = document.querySelector('.search-button')
 // Event listener for the search button click
 function main(){
   let input = document.querySelector('.search-area').value;
-  let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input}`;
+  let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input.toLowerCase()}`;
   
   fetch(url)
   .then((response) => {
