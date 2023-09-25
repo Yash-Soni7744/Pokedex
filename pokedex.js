@@ -77,21 +77,8 @@ function main(){
   
       const weightProgress =  document.getElementById('weight')
       weightProgress.style.width = weightPercent+'%'
+      weightProgress.style.animation = 'weight 1s linear forwards'
 
-      // search_block.addEventListener('keyup',restartAnimation,false)
-
-      // function restartAnimation(e){
-      //   if(e.keyCode == 13){
-
-      //     weightProgress.style.animationName = 'none'
-      //     weightProgress.style.animation = 'weight 1s linear forwards'
-          
-      //     requestAnimationFrame(()=>{
-      //       weightProgress.style.animationName = "weight"
-            
-      //     })
-      //   }
-      // }      
       //hp calculation
       const HP = value.hp
       const maxHP = 255
@@ -151,7 +138,6 @@ function main(){
     }else {
       alert('No Pokemon Found');
     }
-
   })
 }
 searchButton.addEventListener('click', function(e) {
