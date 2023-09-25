@@ -2,7 +2,7 @@ let theme = document.querySelector(".theme-changer")
 let theme_button = document.querySelector('.theme-button')
 let search_block = document.querySelector('.search-area')
 var isDarkTheme = false;
-theme_button.addEventListener('click',function(){
+theme.addEventListener('click',function(){
 
     if (isDarkTheme){
         theme_button.style.left = '3px'
@@ -68,6 +68,7 @@ function main(){
   
       const heightProgress =  document.getElementById('height')
       heightProgress.style.width = heightPercent+'%'
+      heightProgress.style.animation = 'height 1s linear forwards'
 
       //weight calculation
       const weight = value.weight
@@ -76,14 +77,29 @@ function main(){
   
       const weightProgress =  document.getElementById('weight')
       weightProgress.style.width = weightPercent+'%'
-      
+
+      // search_block.addEventListener('keyup',restartAnimation,false)
+
+      // function restartAnimation(e){
+      //   if(e.keyCode == 13){
+
+      //     weightProgress.style.animationName = 'none'
+      //     weightProgress.style.animation = 'weight 1s linear forwards'
+          
+      //     requestAnimationFrame(()=>{
+      //       weightProgress.style.animationName = "weight"
+            
+      //     })
+      //   }
+      // }      
       //hp calculation
       const HP = value.hp
       const maxHP = 255
       const HPPercent = (HP/maxHP)*100
-  
+      
       const HPProgress =  document.getElementById('HP')
       HPProgress.style.width = HPPercent+'%'
+      HPProgress.style.animation = 'HP 1s linear forwards'
 
       //attack calculation
       const attack = value.attack
@@ -92,22 +108,25 @@ function main(){
   
       const attackProgress =  document.getElementById('attack')
       attackProgress.style.width = attackPercent+'%'
-
+      attackProgress.style.animation = 'attack 1s linear forwards'
+      
       //sp-attack calculation
       const sp_Attack = value.special_attack
       const maxsp_Attack = 195
       const sp_AttackPercent = (sp_Attack/maxsp_Attack)*100
-  
+      
       const sp_AttackProgress =  document.getElementById('special-attack')
       sp_AttackProgress.style.width = sp_AttackPercent+'%'
-
+      sp_AttackProgress.style.animation = 'special-attack 1s linear forwards'
+      
       //defence calculation
       const defence = value.defence
       const maxDefence = 230
       const defencePercent = (defence/maxDefence)*100
-  
+      
       const defenceProgress =  document.getElementById('defence')
       defenceProgress.style.width = defencePercent+'%'
+      defenceProgress.style.animation = 'defence 1s linear forwards'
 
       //sp-defence calculation
       const sp_defence = value.special_defence
@@ -116,6 +135,7 @@ function main(){
   
       const sp_defenceProgress =  document.getElementById('special-defence')
       sp_defenceProgress.style.width = sp_defencePercent+'%'
+      sp_defenceProgress.style.animation = 'special-defence 1s linear forwards'
 
       //speed calculation
       const speed = value.speed
@@ -125,9 +145,7 @@ function main(){
       const speedProgress =  document.getElementById('speed')
 
       speedProgress.style.width = speedPercent+'%'
-      speedProgress.classList.remove('speed-animation')
-      speedProgress.classList.add('speed-animation')
-      speedProgress.style.animation = 'speed 2s linear forwards'
+      speedProgress.style.animation = 'speed 1s linear forwards'
 
 
     }else {
@@ -139,11 +157,10 @@ function main(){
 searchButton.addEventListener('click', function(e) {
     main()
 });
-document.querySelector('.search-area').addEventListener('keyup', function(e) {
-    if (e.keyCode == 13) {
-        main(); // Call the main function when Enter is pressed
+search_block.addEventListener('keyup', function(e) {
+    if (e.keyCode == 13) {  // 13 for enter key
+        main(); 
     }
 });
   
-  // Event listener for the Enter key press
   
