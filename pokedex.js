@@ -141,7 +141,7 @@ function main(){
       updateBlinker('special-defence',sp_defencePercent)
       updateBlinker('speed',speedPercent)
 
-      //scrolling the page
+      // scrolling the page
       // Get the element you want to scroll to by its ID or any other method.
       const targetElement = document.getElementById("pokemon-image");
       // Scroll to the target element.
