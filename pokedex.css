@@ -235,10 +235,10 @@ input{
 }
 #pokemon-image{
     position: relative;
-    left: 372px;
-    width: 600px;
-    height: 287px;
-    top: 123px;
+    left: 362px;
+    width: 650px;
+    height: 628px;
+    top: 170px;
     z-index: 999;
 }
 

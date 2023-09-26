@@ -105,9 +105,12 @@ function main(){
       const updateBlinker = (attribute,percent)=>{
 
         const progressBars = document.getElementById(attribute)
+        progressBars.style.width = '0px'
+        progressBars.style.animation = `none`
         progressBars.style.width = percent + "%"
         progressBars.style.animation = `${attribute} 1s linear forwards`
-        progressBars.style.animationPlayState = 'running'
+        
+        // progressBars.style.animationPlayState = 'running'
       }
       const progressBlinkers = document.querySelectorAll(".progress-bar div")
       progressBlinkers.forEach((progressBlinker)=>{
@@ -137,6 +140,12 @@ function main(){
       updateBlinker('defence',defencePercent)
       updateBlinker('special-defence',sp_defencePercent)
       updateBlinker('speed',speedPercent)
+
+      //scrolling the page
+      // Get the element you want to scroll to by its ID or any other method.
+      const targetElement = document.getElementById("pokemon-image");
+      // Scroll to the target element.
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
 
     }else {
       alert('No Pokemon Found');
