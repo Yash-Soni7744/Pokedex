@@ -132,19 +132,19 @@ input{
 }
 .information-block{
     width: 1135px;
-    height: 1216px;
+    height: 729px;
     position: relative;
     display: flex;
     flex-direction: column;
     left: 100px;
     background-color: #303D5E;
     border-radius: 30px;
-    bottom: 40px;
+    top: -552px;
 }
 #pokemon-name{
     position: relative;
-    top: 200px;
-    left: 28%;
+    top: 127px;
+    left: 27%;
     display: flex;
     width: 500px;
     height: 57px;
@@ -152,27 +152,27 @@ input{
     justify-content: center;
     color: #E6BC2A;
     text-align: center;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 500;
-    line-height: 167px; /* 303.636% */
+    line-height: 167px;
     letter-spacing: 3.3px;
 }
 .information-block p{
     color: #E6BC2A;
-    font-size: 32px;
+    font-size: 21px;
     position: relative;
     justify-content: center;
     align-items: center;
-    top: 330px;
-    left: -385px;
+    top: 117px;
+    left: -396px;
     display: flex;
-    margin: 0px 90px;
-    margin-top: 50px;
+    /* margin: -1px 89px; */
+    margin-top: 33px;
 }
 .progress-bar{
     position: relative;
-    top: 305px;
-    left: 346px;
+    top: 100px;
+    left: 345px;
     width: 600px;
     height: 9px;
     border-radius: 9px;
@@ -199,13 +199,13 @@ input{
 .type-box{
     display: flex;
     position: relative;
-    bottom: 1160px;
+    bottom: 1206px;
     margin-left: 1397px;
     justify-content: center;
     align-items: center;
     border-radius: 35px;
-    width: 348px;
-    height: 329px;
+    width: 327px;
+    height: 275px;
     background-color: #303D5E;
 }
 .type-box p{
@@ -215,30 +215,33 @@ input{
 .description{
     display: flex;
     position: relative;
-    bottom: 1000px;
+    bottom: 1176px;
     flex-direction: column;
     margin-left: 1397px;
     justify-content: center;
     align-items: center;
     border-radius: 35px;
-    width: 348px;
-    height: 420px;
+    width: 324px;
+    height: 329px;
     background-color: #FFCB04;
 }
 .description h1{
+    margin-top: 30px;
     font-size: 42px;
     font-weight: bolder;
 }
 .description p{
+    margin-top: 10px;
     padding: 40px;
     font-size: 22px;
 }
 #pokemon-image{
     position: relative;
-    left: 362px;
-    width: 650px;
-    height: 628px;
-    top: 170px;
+    left: 467px;
+    /* top: 171px; */
+    width: 426px;
+    height: 259px;
+    top: -430px;
     z-index: 999;
 }
 

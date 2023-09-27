@@ -160,5 +160,9 @@ search_block.addEventListener('keyup', function(e) {
         main(); 
     }
 });
+
+window.addEventListener('load', (e) => {
+  window.scrollTo(0, 0);
+});
   
   
