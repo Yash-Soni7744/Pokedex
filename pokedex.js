@@ -17,8 +17,8 @@ theme.addEventListener('click', function () {
     search_block.style.color = "#0D1D45"
     document.querySelector('.search-button').style.background = "#0D1D45"
     document.querySelector('#svg').style.fill = "white"
-    theme.style.transition = "justify-content 0.5s ease-in-out"
-    theme_button.style.transition = 'all 0.5s ease-in-out'
+    theme.style.transition = "justify-content 0.4s ease-in-out"
+    theme_button.style.transition = 'all 0.4s ease-in-out'
     document.querySelector('.information-block').style.background = '#0D1D45'
     document.querySelector('.type-box').style.background = '#0D1D45'
     
@@ -35,8 +35,8 @@ theme.addEventListener('click', function () {
     search_block.style.color = "#FFCB04"
     document.querySelector('.search-button').style.background = "#FFCB04"
     document.querySelector('#svg').style.fill = "black"
-    theme_button.style.transition = 'all 0.5s ease-in-out'
-    theme.style.transition = "justify-content 0.5s ease-in-out"
+    theme_button.style.transition = 'all 0.4s ease-in-out'
+    theme.style.transition = "justify-content 0.4s ease-in-out"
     document.querySelector('.information-block').style.background = '#303D5E'
     document.querySelector('.type-box').style.background = '#303D5E'
   }
