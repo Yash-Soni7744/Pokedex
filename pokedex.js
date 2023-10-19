@@ -111,21 +111,25 @@ function main() {
         const updateBlinker = (attribute, percent) => {
 
           const progressBars = document.getElementById(attribute)
-          progressBars.style.width = '0px'
-          progressBars.style.animation = `none`
+
+          progressBars.style.animation = "none"
+          void progressBars.offsetWidth;
+          
+          progressBars.style.animation = `${attribute} 1.3s linear forwards`
           progressBars.style.width = percent + "%"
-          progressBars.style.animation = `${attribute} 1s linear forwards`
 
-          // progressBars.style.animationPlayState = 'running'
+
         }
-        const progressBlinkers = document.querySelectorAll(".progress-bar div")
-        progressBlinkers.forEach((progressBlinker) => {
-          const id = progressBlinker.parentElement.id;
+        // const progressBlinkers = document.querySelectorAll(".progress-bar-div")
+        // progressBlinkers.forEach((progressBlinker) => {
+        //   // const id = progressBlinker.parentElement.id;
 
-          // Position the blinker at the end of the progress bar
-          const blinker = progressBlinker.parentElement.querySelector(".blinker");
+        //   // Position the blinker at the end of the progress bar
+        //   const blinker = progressBlinker.parentElement.querySelector(".blinker");
 
-          blinker.style.left = '97%'; // Position at the end
+        //   blinker.style.left = '95%'; // Position at the end
+
+        
 
           setInterval(function () {
             blinker.style.opacity = 1

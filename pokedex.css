@@ -93,7 +93,7 @@ body{
     justify-content: center;
     letter-spacing: 3px;
     border: none;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 2vw 0px 0px 2vw;
     flex-shrink: 1;
     background-color: rgb(48, 61, 94);
 }
@@ -145,18 +145,18 @@ body{
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 2vw;
     width: 71vw;
-    height: 50vw;
-    margin-left: 30px;
+    height: 100%;
+    margin-left: 2vw;
     background-color: rgb(48, 61, 94);
     color: white;
 }
 
 #pokemon-image {
-    margin-top: -192px;
-    height: auto;
-    width: 370px;
+    margin-top: -12vw;
+    height: 14vw;
+    width: 17vw;
 }
 
 .extra-info {
@@ -168,68 +168,72 @@ body{
 }
 
 .type-box {
-    margin-right: 20px;
+    /* margin-right: 3vw; */
     display: flex;
-    width: 230px;
-    height: 150px;
-    padding: 10px;
+    width: 15vw;
+    height: 12vw;
+    padding: 2vw;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 2vw;
     background-color: rgb(48, 61, 94);
 }
 .type-box p{
-    font-size: 3em;
+    font-size: 3vw;
     color: #ffcb04;
 }
 .description {
     display: flex;
-    margin-right: 20px;
+    /* margin-right: 7vw; */
     background-color: #ffcb04;
     flex-direction: column;
-    width: 230px;
-    height: 260px;
-    padding: 10px;
+    width: 15vw;
+    height: 18vw;
+    padding: 2vw;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 2vw;
+}
+.description h1,p{
+    font-size: 1.3vw;
 }
 #pokemon-name{
-    font-size: 5em;
+    font-size: 2.8vw;
     font-family: 'pokemon';
-    margin-top: -46px;
+    margin-top: -2vw;
     color: #ffcb04;
 }
 .pokemon-data{
     display: flex;
     flex-direction: row;
     width: 69vw;
+    padding: 1vw 1vw;
     justify-content: flex-start;
 }
 .pokemon-stat{
     display: flex;
     flex-direction: column;
     font-size: 1vw;
-    gap: 28px;
+    gap: 2.17vw;
 }
 .pokemon-stat p{
-    font-size: 1.9em;
+    font-size: 1.3vw;
     color: #ffcb04;
-    margin-top: 2px;
+    margin-top: 1vw;
     display: flex;
 }
 .progress-bar-div{
     flex-direction: column;
     display: flex;
-    gap: 3.3vw;
-    margin-left: 50px;
+    gap: 2.7vw;
+    margin-left: 2vw;
     
 }
 .blinker {
     position: relative;
     display: flex;
-    height: 12px;
-    width: 12px;
+    height: 1vw;
+    width: 1vw;
     filter: blur(9px);
     background-color: #ffcb04;
 }
@@ -237,67 +241,124 @@ body{
 .progress-bar {
     justify-content: center;
     align-items: center;
-    height: 8px;
+    height: 0.55vw;
     width: 49vw;
-    margin-top: 14px;
+    margin-top: 1.7vw;
     background-color: #4C67AA;
-    border-radius: 20px;
+    border-radius: 2vw;
 }
 #height{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
 }
 #weight{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #HP{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #attack{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #special-attack{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #defence{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #special-defence{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
     
 }
 #speed{
     width: 1%;
-    height: 8px;
+    height: 0.6vw;
     background-color: #ffcb04;
     border-radius: 20px;
 
 }
+@keyframes height {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes HP {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes weight {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes attack {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes special-attack {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes defence{
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes special-defence {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+@keyframes speed {
+    0% {
+        width: 0%;
+    }
+    100% {
+    }
+}
+
 
 /* @media screen and (max-width: 728px) {
     .text-area h1{
