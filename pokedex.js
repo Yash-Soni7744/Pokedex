@@ -131,16 +131,16 @@ function main() {
 
         
 
-          setInterval(function () {
-            blinker.style.opacity = 1
-            blinker.style.transition = '0.7s ease-out'
-          }, 800)
-          setInterval(function () {
-            blinker.style.opacity = 0
-            blinker.style.transition = '0.7s ease-in'
-          }, 1600)
+        //   setInterval(function () {
+        //     blinker.style.opacity = 1
+        //     blinker.style.transition = '0.7s ease-out'
+        //   }, 800)
+        //   setInterval(function () {
+        //     blinker.style.opacity = 0
+        //     blinker.style.transition = '0.7s ease-in'
+        //   }, 1600)
 
-        })
+        // })
 
         updateBlinker('height', heightPercent)
         updateBlinker('weight', weightPercent)
