@@ -3,7 +3,7 @@ let theme_button = document.querySelector('.theme-button')
 let search_block = document.querySelector('.search-area')
 var isDarkTheme = false;
 theme.addEventListener('click', function () {
-  
+
   isDarkTheme = !isDarkTheme
   if (isDarkTheme) {
     theme.style.justifyContent = 'flex-start'
@@ -21,7 +21,7 @@ theme.addEventListener('click', function () {
     theme_button.style.transition = 'all 0.4s ease-in-out'
     document.querySelector('.information-block').style.background = '#0D1D45'
     document.querySelector('.type-box').style.background = '#0D1D45'
-    
+
   }
   else {
     theme.style.justifyContent = 'flex-end'
@@ -114,33 +114,33 @@ function main() {
 
           progressBars.style.animation = "none"
           void progressBars.offsetWidth;
-          
+
           progressBars.style.animation = `${attribute} 1.3s linear forwards`
           progressBars.style.width = percent + "%"
 
 
         }
-        // const progressBlinkers = document.querySelectorAll(".progress-bar-div")
-        // progressBlinkers.forEach((progressBlinker) => {
-        //   // const id = progressBlinker.parentElement.id;
+        const progressBlinkers = document.querySelectorAll(".progress-bar-div")
+        progressBlinkers.forEach((progressBlinker) => {
+          // const id = progressBlinker.parentElement.id;
 
-        //   // Position the blinker at the end of the progress bar
-        //   const blinker = progressBlinker.parentElement.querySelector(".blinker");
+          // Position the blinker at the end of the progress bar
+          const blinker = progressBlinker.parentElement.querySelector(".blinker");
 
-        //   blinker.style.left = '95%'; // Position at the end
+          blinker.style.left = '95%'; // Position at the end
 
-        
 
-        //   setInterval(function () {
-        //     blinker.style.opacity = 1
-        //     blinker.style.transition = '0.7s ease-out'
-        //   }, 800)
-        //   setInterval(function () {
-        //     blinker.style.opacity = 0
-        //     blinker.style.transition = '0.7s ease-in'
-        //   }, 1600)
 
-        // })
+          setInterval(function () {
+            blinker.style.opacity = 1
+            blinker.style.transition = '0.7s ease-out'
+          }, 800)
+          setInterval(function () {
+            blinker.style.opacity = 0
+            blinker.style.transition = '0.7s ease-in'
+          }, 1600)
+
+        })
 
         updateBlinker('height', heightPercent)
         updateBlinker('weight', weightPercent)
@@ -161,6 +161,11 @@ function main() {
         alert('No Pokemon Found');
       }
     })
+    .catch((err)=>{
+      alert('server down for maintenance ',err)
+      console.log(new Error("Error because of the server issue"))
+    })
+
 }
 searchButton.addEventListener('click', function (e) {
   e.preventDefault()

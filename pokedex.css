@@ -229,14 +229,14 @@ body{
     margin-left: 2vw;
     
 }
-.blinker {
+/* .blinker {
     position: relative;
     display: flex;
     height: 1vw;
     width: 1vw;
     filter: blur(9px);
     background-color: #ffcb04;
-}
+} */
 
 .progress-bar {
     justify-content: center;
