@@ -49,7 +49,11 @@ function main() {
   let input = document.querySelector('.search-area').value;
   let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input.toLowerCase()}`;
 
-  fetch(url)
+  fetch(url , {
+    headers: {
+      "Authorization": "E11C11FAF4381CA98479597E887C8"
+    }
+  })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
