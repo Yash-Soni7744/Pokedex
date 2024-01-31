@@ -50,11 +50,15 @@ function main() {
   let url = `https://api.pokemon.project.projectrexa.dedyn.io/pokeapi/${input.toLowerCase()}`;
 
   fetch(url , {
+    method: "GET",
     headers: {
       "Authorization": "E11C11FAF4381CA98479597E887C8"
     }
   })
     .then((response) => {
+      if(response.status===404){
+        alert('No pokemon found')
+      }
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -63,7 +67,7 @@ function main() {
     .then((value) => {
       let loweredInput = input.toLowerCase()
       console.log(loweredInput)
-
+      
       if (input == value.id || loweredInput === value.name) {
         let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
         document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
@@ -161,9 +165,8 @@ function main() {
         // Scroll to the target element.
         targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      } else {
-        alert('No Pokemon Found');
-      }
+      } 
+      
     })
     .catch((err)=>{
       alert('server down for maintenance ',err)
