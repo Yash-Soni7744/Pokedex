@@ -155,8 +155,8 @@ body{
 
 #pokemon-image {
     margin-top: -12vw;
-    height: 14vw;
-    width: 17vw;
+    height: 256px;
+    width: 256px;
 }
 
 .extra-info {
@@ -167,7 +167,7 @@ body{
     gap: 20px;
 }
 
-.type-box {
+.type-box1,.type-box2 {
     /* margin-right: 3vw; */
     display: flex;
     width: 15vw;
@@ -178,7 +178,7 @@ body{
     border-radius: 2vw;
     background-color: rgb(48, 61, 94);
 }
-.type-box p{
+.type-box1 p,.type-box2 p{
     font-size: 3vw;
     color: #ffcb04;
 }
