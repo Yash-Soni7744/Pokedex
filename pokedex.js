@@ -2,6 +2,7 @@ let theme = document.querySelector(".theme-changer")
 let theme_button = document.querySelector('.theme-button')
 let search_block = document.querySelector('.search-area')
 var isDarkTheme = false;
+document.querySelector('.type-box2').style.display = "none"
 theme.addEventListener('click', function () {
 
   isDarkTheme = !isDarkTheme
@@ -72,7 +73,16 @@ function main() {
         let firstCapitalizedChar = value.name.charAt(0).toUpperCase();
         document.querySelector('#pokemon-name').innerHTML = firstCapitalizedChar + value.name.slice(1);
         document.querySelector('#pokemon-image').src = value.image;
-        document.querySelector('.type-box').querySelector('p').innerHTML = value.primary_type;
+
+        document.querySelector('.type-box1').querySelector('p').innerHTML = value.primary_type.toUpperCase();
+        if(value.secondary_type !==null){
+          document.querySelector('.type-box2').style.display = "flex"
+          document.querySelector('.type-box2').querySelector('p').innerHTML = value.secondary_type.toUpperCase();
+        }
+        else{
+          document.querySelector('.type-box2').style.display = "none"
+        }
+        
         document.querySelector('.description').querySelector('p').innerHTML = value.description;
 
         //height calcualtion
@@ -165,7 +175,7 @@ function main() {
         // Scroll to the target element.
         targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      } 
+      }
       
     })
     .catch((err)=>{
